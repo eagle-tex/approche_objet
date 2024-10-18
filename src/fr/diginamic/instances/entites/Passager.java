@@ -4,7 +4,14 @@ public class Passager {
   String nom;
   String prenom;
   String numeroSiege;
-<<<<<<< HEAD
+
+  public Passager(String nom, String prenom, String numeroSiege) {
+    this.nom = nom;
+    this.prenom = prenom;
+    this.numeroSiege = numeroSiege;
+  }
+
+  public Passager() {}
 
   public String getNom() {
     return nom;
@@ -44,6 +51,4 @@ public class Passager {
         + '\''
         + '}';
   }
-=======
->>>>>>> refs/remotes/origin/main
 }

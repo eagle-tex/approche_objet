@@ -7,6 +7,14 @@ public class Pilote {
   String prenom;
   LocalDate dateLicence;
 
+  public Pilote(String nom, String prenom, LocalDate dateLicence) {
+    this.nom = nom;
+    this.prenom = prenom;
+    this.dateLicence = dateLicence;
+  }
+
+  public Pilote() {}
+
   public String getNom() {
     return nom;
   }

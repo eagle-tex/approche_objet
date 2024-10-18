@@ -40,6 +40,7 @@ public class Avion {
     } else {
       // agrandir le tableau, doubler sa taille
       passagers = Arrays.copyOf(passagers, nombrePassagersMax * 2);
+      setNombrePassagersMax(nombrePassagersMax * 2);
       // ajouter le passager, puis incrémenter `nombrePassagers`
       passagers[nombrePassagers++] = passager;
     }
@@ -97,6 +98,7 @@ public class Avion {
 
   public void setPassagers(Passager[] passagers) {
     this.passagers = passagers;
+    this.nombrePassagers = passagers.length;
   }
 
   public int getNombrePassagers() {

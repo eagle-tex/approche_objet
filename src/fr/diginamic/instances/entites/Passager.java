@@ -4,6 +4,7 @@ public class Passager {
   String nom;
   String prenom;
   String numeroSiege;
+<<<<<<< HEAD
 
   public String getNom() {
     return nom;
@@ -43,4 +44,6 @@ public class Passager {
         + '\''
         + '}';
   }
+=======
+>>>>>>> refs/remotes/origin/main
 }

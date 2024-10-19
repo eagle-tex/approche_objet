@@ -17,6 +17,10 @@ public class Utils {
     return BIG_DECIMAL_FORMAT;
   }
 
+  public static String formatterValeur(double valeur) {
+    return DECIMAL_FORMAT.format(valeur);
+  }
+
   private static String deviseAvecLocalisation(BigDecimal montant, Locale locale) {
     NumberFormat nf = NumberFormat.getCurrencyInstance(locale);
     return nf.format(montant);
@@ -28,5 +32,14 @@ public class Utils {
 
   public static BigDecimal strToBigDecimal(String montant) {
     return new BigDecimal(montant).setScale(2, RoundingMode.UP);
+  }
+
+  public static boolean validerValeurPositive(double valeur) {
+    return valeur > 0;
+  }
+
+  public static void main(String[] args) {
+    double val = -5;
+    System.out.println(validerValeurPositive(val));
   }
 }

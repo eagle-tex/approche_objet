@@ -2,8 +2,6 @@ package fr.diginamic.banque;
 
 public class CompteTaux extends Compte {
 
-  //  private static final DecimalFormat df = new DecimalFormat("0.00");
-
   private double taux;
 
   public CompteTaux(String numCompte, String solde, double taux) {
@@ -13,6 +11,14 @@ public class CompteTaux extends Compte {
 
   public CompteTaux(String numCompte, double taux) {
     super(numCompte);
+    this.taux = taux;
+  }
+
+  public double getTaux() {
+    return taux;
+  }
+
+  public void setTaux(double taux) {
     this.taux = taux;
   }
 

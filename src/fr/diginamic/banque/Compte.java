@@ -7,18 +7,23 @@ public class Compte {
   private String numCompte;
   private BigDecimal solde;
 
-  public Compte(String numCompte, String solde) {
+  public Compte(String numCompte, String strSolde) {
     this.numCompte = numCompte;
-    this.solde = new BigDecimal(solde);
+    this.solde = strToBigDecimal(strSolde);
   }
 
   public Compte(String numCompte) {
     this.numCompte = numCompte;
-    this.solde = new BigDecimal("0.00");
+    this.solde = strToBigDecimal("0.00");
   }
 
   public BigDecimal strToBigDecimal(String solde) {
-    return new BigDecimal(solde).setScale(2, RoundingMode.DOWN);
+    //    return new BigDecimal(solde).setScale(2, RoundingMode.UP);
+    return formatBigDecimal(new BigDecimal(solde));
+  }
+
+  public BigDecimal formatBigDecimal(BigDecimal montant) {
+    return montant.setScale(2, RoundingMode.UP);
   }
 
   public void afficherCompte() {
@@ -29,21 +34,21 @@ public class Compte {
     return numCompte;
   }
 
-  public void setNumCompte(String numCompte) {
-    this.numCompte = numCompte;
-  }
+  //  public void setNumCompte(String numCompte) {
+  //    this.numCompte = numCompte;
+  //  }
 
   public BigDecimal getSolde() {
-    return solde.setScale(2, RoundingMode.UP);
+    //    return solde.setScale(2, RoundingMode.UP);
+    return formatBigDecimal(solde);
   }
 
-  public void setSolde(String solde) {
-    this.solde = strToBigDecimal(solde);
-  }
+  //  public void setSolde(String solde) {
+  //    this.solde = strToBigDecimal(solde);
+  //  }
 
   @Override
   public String toString() {
-    //    BigDecimal solde2Dec = this.solde.setScale(2, RoundingMode.UP);
     BigDecimal solde2Dec = this.getSolde();
     return "Compte: { numCompte=" + numCompte + ", solde=€" + solde2Dec + " }";
   }

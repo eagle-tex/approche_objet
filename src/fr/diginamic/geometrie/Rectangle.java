@@ -25,12 +25,20 @@ public class Rectangle implements ObjetGeometrique {
     return longueur * largeur;
   }
 
+  public double getLargeur() {
+    return largeur;
+  }
+
+  public double getLongueur() {
+    return longueur;
+  }
+
   @Override
   public String toString() {
     return "Rectangle { longueur = "
-        + Utils.formatterValeur(longueur)
+        + Utils.formatterValeur(getLongueur())
         + ", largeur = "
-        + Utils.formatterValeur(largeur)
+        + Utils.formatterValeur(getLargeur())
         + " }";
   }
 }

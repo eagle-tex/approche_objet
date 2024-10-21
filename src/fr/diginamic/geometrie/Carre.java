@@ -11,8 +11,12 @@ public class Carre extends Rectangle {
     this.cote = cote;
   }
 
+  public double getCote() {
+    return cote;
+  }
+
   @Override
   public String toString() {
-    return "Carré { côté = " + Utils.formatterValeur(this.cote) + " }";
+    return "Carré { côté = " + Utils.formatterValeur(getCote()) + " }";
   }
 }

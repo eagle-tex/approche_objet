@@ -24,6 +24,13 @@ public class Cercle implements ObjetGeometrique {
     return Math.pow(rayon, 2) * Math.PI;
   }
 
+  //  @Override
+  //  public void afficherInfos() {
+  //    System.out.println(this);
+  //    System.out.println("Périmètre = " + this.afficherPerimetre());
+  //    System.out.println("Surface  = " + this.afficherSurface());
+  //  }
+
   public double getRayon() {
     return rayon;
   }

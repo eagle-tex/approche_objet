@@ -4,13 +4,13 @@ public class CompteTaux extends Compte {
 
   private double taux;
 
-  public CompteTaux(String numCompte, String solde, double taux) {
-    super(numCompte, solde);
+  public CompteTaux(String numero, String solde, double taux) {
+    super(numero, solde);
     this.taux = taux;
   }
 
-  public CompteTaux(String numCompte, double taux) {
-    super(numCompte);
+  public CompteTaux(String numero, double taux) {
+    super(numero);
     this.taux = taux;
   }
 

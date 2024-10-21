@@ -4,16 +4,16 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 public class Compte {
-  private String numCompte;
+  private String numero;
   private BigDecimal solde;
 
-  public Compte(String numCompte, String strSolde) {
-    this.numCompte = numCompte;
+  public Compte(String numero, String strSolde) {
+    this.numero = numero;
     this.solde = strToBigDecimal(strSolde);
   }
 
-  public Compte(String numCompte) {
-    this.numCompte = numCompte;
+  public Compte(String numero) {
+    this.numero = numero;
     this.solde = strToBigDecimal("0.00");
   }
 
@@ -30,11 +30,11 @@ public class Compte {
     System.out.println(this);
   }
 
-  public String getNumCompte() {
-    return numCompte;
+  public String getNumero() {
+    return numero;
   }
 
-  //  public void setNumCompte(String numCompte) {
+  //  public void setNumero(String numCompte) {
   //    this.numCompte = numCompte;
   //  }
 
@@ -50,7 +50,7 @@ public class Compte {
   @Override
   public String toString() {
     BigDecimal solde2Dec = this.getSolde();
-    return "Compte: { numCompte=" + numCompte + ", solde=€" + solde2Dec + " }";
+    return "Compte: { numCompte=" + numero + ", solde=€" + solde2Dec + " }";
   }
 
   public static void main(String[] args) {

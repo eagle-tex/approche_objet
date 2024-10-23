@@ -38,4 +38,9 @@ public class Ville {
     }
     return Objects.equals(v.getNom(), nom) && v.getNbHabitants() == this.nbHabitants;
   }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(nom, nbHabitants);
+  }
 }

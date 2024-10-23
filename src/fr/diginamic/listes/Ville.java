@@ -1,5 +1,7 @@
 package fr.diginamic.listes;
 
+import java.util.Objects;
+
 public class Ville {
   private String nom;
   private int nbHabitants;
@@ -34,6 +36,6 @@ public class Ville {
     if (!(obj instanceof Ville v)) {
       return false;
     }
-    return v.getNom().equals(this.nom) && v.getNbHabitants() == this.nbHabitants;
+    return Objects.equals(v.getNom(), nom) && v.getNbHabitants() == this.nbHabitants;
   }
 }

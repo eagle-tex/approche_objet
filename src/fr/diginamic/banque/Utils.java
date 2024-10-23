@@ -10,6 +10,8 @@ import java.util.Locale;
 public class Utils {
   public static final DecimalFormat DECIMAL_FORMAT = new DecimalFormat("0.00");
 
+  public static final NumberFormat frenchFormatter = NumberFormat.getInstance(Locale.FRANCE);
+
   public static DecimalFormatSymbols getBigDecimalFormat() {
     DecimalFormatSymbols BIG_DECIMAL_FORMAT = new DecimalFormatSymbols();
     BIG_DECIMAL_FORMAT.setDecimalSeparator(',');
